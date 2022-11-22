@@ -1,0 +1,105 @@
+﻿@model mvcInterfazUsuario.Models.modeloVenta
+
+@{
+    ViewBag.Title = "Detalle de Venta";
+}
+
+<h2>Detalle de Venta</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdVenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioUnidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecioUnidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoPago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoPago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoCambio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoCambio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "modificarVenta_ENT", new { pId = Model.IdProducto }) |
+    @Html.ActionLink("Regresar", "listar_VentaENT")
+</p>

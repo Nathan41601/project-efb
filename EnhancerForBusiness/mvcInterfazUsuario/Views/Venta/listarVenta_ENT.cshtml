@@ -1,0 +1,93 @@
+﻿@model IEnumerable<mvcInterfazUsuario.Models.modeloVenta>
+
+@{
+    ViewBag.Title = "Listado de Ventas";
+}
+
+<h2>Listado de Ventas</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "agregarVenta_ENT")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdVenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioUnidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoCambio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdVenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioUnidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoCambio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "modificarVenta_ENT", new { pId = item.IdVenta }) |
+            @Html.ActionLink("Detalles", "detalleVenta_ENT", new { pId = item.IdVenta }) |
+            @Html.ActionLink("Eliminar", "eliminarVenta_ENT", new { pId = item.IdVenta })
+        </td>
+    </tr>
+}
+
+</table>

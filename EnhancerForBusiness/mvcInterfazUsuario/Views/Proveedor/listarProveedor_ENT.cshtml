@@ -1,0 +1,69 @@
+﻿@model IEnumerable<mvcInterfazUsuario.Models.modeloProveedor>
+
+@{
+    ViewBag.Title = "Listado de Proveedores";
+}
+
+<h2>Listado de Proveedores</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "agregarProveedor_ENT")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Identificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RazonSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Identificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RazonSocial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "modificarProveedor_ENT", new { pId = item.IdProveedor }) |
+            @Html.ActionLink("Detalles", "detalleProveedor_ENT", new { pId = item.IdProveedor }) |
+            @Html.ActionLink("Eliminar", "eliminarProveedor_ENT", new { pId = item.IdProveedor })
+        </td>
+    </tr>
+}
+
+</table>

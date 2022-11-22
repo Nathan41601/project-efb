@@ -1,0 +1,81 @@
+﻿@model IEnumerable<mvcInterfazUsuario.Models.modeloCompra>
+
+@{
+    ViewBag.Title = "Listado de Compras";
+}
+
+<h2>Listado de Compras</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "agregarCompra_ENT")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCompra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroFactura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioUnidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdCompra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProveedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroFactura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrecioUnidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "modificarCompra_ENT", new { pId = item.IdCompra }) |
+            @Html.ActionLink("Detalles", "detalleCompra_ENT", new { pId = item.IdCompra }) |
+            @Html.ActionLink("Eliminar", "eliminarCompra_ENT", new { pId = item.IdCompra })
+        </td>
+    </tr>
+}
+
+</table>

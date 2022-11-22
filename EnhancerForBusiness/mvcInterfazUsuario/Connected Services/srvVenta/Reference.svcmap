@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="215efd3f-153c-475a-bfb9-b01bd13a9c11" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54539/srvVenta.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="srvVenta.xsd" MetadataType="Schema" ID="d8cc0d8b-6854-4ab1-8271-de17a6244e18" SourceId="1" SourceUrl="http://localhost:54539/srvVenta.svc?xsd=xsd1" />
+    <MetadataFile FileName="srvVenta.disco" MetadataType="Disco" ID="6b0e95f9-da79-423d-8fe8-564a5ea4bcd2" SourceId="1" SourceUrl="http://localhost:54539/srvVenta.svc?disco" />
+    <MetadataFile FileName="srvVenta1.xsd" MetadataType="Schema" ID="5352a36c-bacb-4277-be39-47c82ee6330a" SourceId="1" SourceUrl="http://localhost:54539/srvVenta.svc?xsd=xsd0" />
+    <MetadataFile FileName="srvVenta.wsdl" MetadataType="Wsdl" ID="01ad424f-7c01-4851-92f3-f41c575c8721" SourceId="1" SourceUrl="http://localhost:54539/srvVenta.svc?wsdl" />
+    <MetadataFile FileName="srvVenta2.xsd" MetadataType="Schema" ID="4833d259-3743-4c1c-909a-e5dfe96ef281" SourceId="1" SourceUrl="http://localhost:54539/srvVenta.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

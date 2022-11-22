@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1df88ebda64c4334aa1e812d0e6ec0a0" Name="Diagram1">
+        <EntityTypeShape EntityType="SAModelo.Operaciones" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAModelo.Rol" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAModelo.RolOperacion" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAModelo.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SAModelo.Usuario" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="SAModelo.FK_Operaciones_Operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="SAModelo.FK_RolOperacion_Operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="SAModelo.FK_RolOperacion_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="SAModelo.FK_Usuario_Rol" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="eb8d1095-b658-4b00-8acc-31723b99d5dc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54539/srvProveedor.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="srvProveedor.disco" MetadataType="Disco" ID="93da7ba6-8381-430d-bd99-81f5d66f5da9" SourceId="1" SourceUrl="http://localhost:54539/srvProveedor.svc?disco" />
+    <MetadataFile FileName="srvProveedor.xsd" MetadataType="Schema" ID="fc01481a-18e8-46d5-aba6-2a516f743f4f" SourceId="1" SourceUrl="http://localhost:54539/srvProveedor.svc?xsd=xsd2" />
+    <MetadataFile FileName="srvProveedor1.xsd" MetadataType="Schema" ID="2efee2c1-8c76-4b8e-8a4a-75c4fd7d790c" SourceId="1" SourceUrl="http://localhost:54539/srvProveedor.svc?xsd=xsd1" />
+    <MetadataFile FileName="srvProveedor2.xsd" MetadataType="Schema" ID="f064a32c-902a-48a3-8c2d-54ef6bd653da" SourceId="1" SourceUrl="http://localhost:54539/srvProveedor.svc?xsd=xsd0" />
+    <MetadataFile FileName="srvProveedor.wsdl" MetadataType="Wsdl" ID="42e96944-5ebd-4790-8603-35929c083c1a" SourceId="1" SourceUrl="http://localhost:54539/srvProveedor.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

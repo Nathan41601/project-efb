@@ -1,0 +1,51 @@
+﻿@model IEnumerable<mvcInterfazUsuario.Models.modeloCategoria>
+
+@{
+    ViewBag.Title = "Listado de Categorias";
+}
+
+<h2>Listado de Categorias</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "agregarCategoria_ENT")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCategoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdCategoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCreacion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "modificarCategoria_ENT", new { pId = item.IdCategoria }) |
+            @Html.ActionLink("Detalles", "detalleCategoria_ENT", new { pId = item.IdCategoria }) |
+            @Html.ActionLink("Eliminar", "eliminarCategoria_ENT", new { pId = item.IdCategoria })
+        </td>
+    </tr>
+}
+
+</table>
