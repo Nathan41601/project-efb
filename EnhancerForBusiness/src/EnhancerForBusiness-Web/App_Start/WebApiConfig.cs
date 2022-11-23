@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Microsoft.Practices.Unity;
+using Unity.WebApi;
 
 namespace EnhancerForBusiness_Web
 {
-    public static class WebApiConfig
+    public class WebApiConfig
     {
-        public static void Register(HttpConfiguration config)
+        public static void RegisterWebApi(HttpConfiguration config, IUnityContainer container)
         {
-            // Web API configuration and services
+            config.DependencyResolver = new UnityDependencyResolver(container);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
         }
     }
 }

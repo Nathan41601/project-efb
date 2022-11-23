@@ -1,5 +1,5 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using EnhancerForBusiness_Web.Utils;
 
 namespace EnhancerForBusiness_Web
 {
@@ -8,6 +8,7 @@ namespace EnhancerForBusiness_Web
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new LayoutDataAttribute());
         }
     }
 }
