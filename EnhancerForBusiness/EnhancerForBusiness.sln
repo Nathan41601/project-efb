@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{E9B2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnhancerForBusiness-Web", "src\EnhancerForBusiness-Web\EnhancerForBusiness-Web.csproj", "{FD3589D7-A4EB-408F-B257-7F44822A125E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnhancerForBusiness-Web.Tests", "test\EnhancerForBusiness-Web.Tests\EnhancerForBusiness-Web.Tests.csproj", "{707028F2-D11F-4AE6-9FBB-411C13575D74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FD3589D7-A4EB-408F-B257-7F44822A125E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD3589D7-A4EB-408F-B257-7F44822A125E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD3589D7-A4EB-408F-B257-7F44822A125E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707028F2-D11F-4AE6-9FBB-411C13575D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707028F2-D11F-4AE6-9FBB-411C13575D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707028F2-D11F-4AE6-9FBB-411C13575D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707028F2-D11F-4AE6-9FBB-411C13575D74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E9B2484A-7BAF-4005-B64E-3524126AC70F} = {3AA4B940-FF42-47E8-8077-B68F36F71D2E}
 		{FD3589D7-A4EB-408F-B257-7F44822A125E} = {D3DF909C-AF67-4960-B9F0-CAA453F2CDCD}
+		{707028F2-D11F-4AE6-9FBB-411C13575D74} = {2946609D-EC18-4986-8F10-E50E5DB7EEBC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A0E3C682-811A-47F8-9AD6-9422106BB2C7}
