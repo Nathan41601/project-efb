@@ -132,7 +132,9 @@ namespace EnhancerForBusiness_Web.Controllers
 
         //
         // GET: /Manage/VerifyPhoneNumber
+#pragma warning disable CS1998
         public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
+#pragma warning restore CS1998
         {
             // This code allows you exercise the flow without actually sending codes
             // For production use please register a SMS provider in IdentityConfig and generate a code here.
