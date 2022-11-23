@@ -17,7 +17,9 @@ namespace EnhancerForBusiness_Web
         {
             ConfigureAuth(app);
 
+#pragma warning disable CS0618 // Type or member is obsolete
             TelemetryConfiguration.Active.InstrumentationKey = WebConfigurationManager.AppSettings["Keys:ApplicationInsights:InstrumentationKey"];
+#pragma warning restore CS0618 // Type or member is obsolete
 
         }
     }
