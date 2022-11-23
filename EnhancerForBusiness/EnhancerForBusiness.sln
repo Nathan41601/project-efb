@@ -8,10 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2946609D-EC18-4986-8F10-E50E5DB7EEBC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{3AA4B940-FF42-47E8-8077-B68F36F71D2E}"
-	ProjectSection(SolutionItems) = preProject
-		data\Scripts\Database-DataOnly.sql = data\Scripts\Database-DataOnly.sql
-		data\Scripts\Database-SchemaOnly.sql = data\Scripts\Database-SchemaOnly.sql
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnhancerForBusiness-Web", "src\EnhancerForBusiness-Web\EnhancerForBusiness-Web.csproj", "{D9326823-9186-4D39-9247-7CFABB38CC6D}"
 EndProject
