@@ -13,21 +13,9 @@ namespace EnhancerForBusiness_Web.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private SignInManager<ApplicationUser, string> SignInManager
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().Get<SignInManager<ApplicationUser, string>>();
-            }
-        }
+        private SignInManager<ApplicationUser, string> SignInManager => HttpContext.GetOwinContext().Get<SignInManager<ApplicationUser, string>>();
 
-        private UserManager<ApplicationUser> UserManager
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().GetUserManager<UserManager<ApplicationUser>>();
-            }
-        }
+        private UserManager<ApplicationUser> UserManager => HttpContext.GetOwinContext().GetUserManager<UserManager<ApplicationUser>>();
 
         //
         // GET: /Account/Login
@@ -36,8 +24,8 @@ namespace EnhancerForBusiness_Web.Controllers
         {
             ViewBag.ReturnUrl = returnUrl;
             ViewBag.AuthenticationManager = AuthenticationManager;
-
-            return View();
+            var model = new LoginViewModel();
+            return View(model);
         }
 
         //
@@ -475,13 +463,7 @@ namespace EnhancerForBusiness_Web.Controllers
             }
         }
 
-        private IAuthenticationManager AuthenticationManager
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().Authentication;
-            }
-        }
+        private IAuthenticationManager AuthenticationManager => HttpContext.GetOwinContext().Authentication;
 
         internal class ChallengeResult : HttpUnauthorizedResult
         {
