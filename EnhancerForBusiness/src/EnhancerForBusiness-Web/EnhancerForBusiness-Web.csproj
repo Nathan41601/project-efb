@@ -510,7 +510,6 @@
     <Content Include="Areas\Admin\Views\StoreManager\RemoveProduct.cshtml" />
     <Content Include="Areas\Admin\Views\Web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
-    <Content Include="Models\project.json" />
     <Content Include="Content\Account.css.map" />
     <Content Include="Content\Account.scss" />
     <Content Include="Content\Home.css.map" />
