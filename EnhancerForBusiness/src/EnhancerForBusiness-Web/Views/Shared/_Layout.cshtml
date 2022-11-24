@@ -1,5 +1,4 @@
 ﻿@using EnhancerForBusiness_Web.Models
-@using EnhancerForBusiness_Web.Utils
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +46,7 @@
                     </div>
                     <div class="pull-right navigation">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-header-nav">
+                            <button type="button" data-toggle="collapse" data-target="#collapse-header-nav">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -139,22 +138,13 @@
                             <li><a>License Agreement</a></li>
                             <li><a href="http://asp.net/" target="_blank">ASP.NET</a></li>
                         </ul>
-                        <p>Deploy to Azure</p>
-                        <a class="deploy-azure">
-                            @Html.Image("deploy_button.png", "deploy to azure image")
-                        </a>
                     </div>
                 </div>
                 <hr />
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="pull-left-sm">
-                            © @DateTime.UtcNow.Year Microsoft. Based on The Phoenix Project by <a href="http://www.realgenekim.me/" class="footer-link">Gene Kim</a>.
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="pull-left-sm pull-right-md">
-                            All rights reserved. Your payments are safe and secure.
+                            © @DateTime.UtcNow.Year Todos los derechos reservados.
                         </div>
                     </div>
                 </div>
