@@ -2,11 +2,11 @@
 
 <div id="order-history-page">
     <section>
-        <h2>Order History</h2>
+        <h2>Historial de Pedidos</h2>
 
         <div class="row">
             <div class="col-md-6 col-border-md-right">
-                <h4>Search By Date</h4>
+                <h4>Búsqueda por Fecha</h4>
 
                 @using (Html.BeginForm("Index", "Orders", FormMethod.Get))
                 {
@@ -14,7 +14,7 @@
                     {
                         <div class="row form-group">
                             <div class="col-xs-12 col-sm-12 col-md-3 text-right-md">
-                                <label for="inputfield1" class="control-label">Username</label>
+                                <label for="inputfield1" class="control-label">Nombre de Usuario</label>
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-7">
                                 <input type="text" class="form-control" name="username" value="@Model.Username" placeholder="Username"  />
@@ -24,7 +24,7 @@
 
                     <div class="row form-group">
                         <div class="col-xs-12 col-sm-12 col-md-3 text-right-md">
-                            <label for="inputfield1" class="control-label">Start date</label>
+                            <label for="inputfield1" class="control-label">Fecha de Inicio</label>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-7">
                             <input type="text" class="form-control jquery-ui-datepicker" name="start" value="@Model.StartDate.ToString("d")" />
@@ -32,7 +32,7 @@
                     </div>
                     <div class="row form-group">
                         <div class="col-xs-12 col-sm-12 col-md-3 text-right-md">
-                            <label for="inputfield1" class="control-label">End date</label>
+                            <label for="inputfield1" class="control-label">Fecha de Finalización</label>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-7">
                             <input type="text" class="form-control jquery-ui-datepicker" name="end" value="@Model.EndDate.ToString("d")" />
@@ -46,14 +46,14 @@
                 }
             </div>
             <div class="col-md-6 wide-col-padding">
-                <h4>Search By Order Number</h4>
+                <h4>Buscar por Número de Pedido</h4>
 
                 <div class="row form-group">
                     @using (Html.BeginForm("Details", "Orders", FormMethod.Get))
             {
                         <div class="col-sm-8 col-md-10">
                             <input type="text" class="form-control" id="name" name="id" placeholder="Order number" />
-                            <input class="btn" type="submit" value="Open" />
+                            <input class="btn" type="submit" value="Buscar" />
                         </div>
                     }
                 </div>
@@ -69,9 +69,9 @@
             {
                 <div class="row border order">
                     <div class="col-xs-12 col-sm-3 order-summary">
-                        <div>Order Number: #@order.OrderId</div>
-                        <div>Order Date: @order.OrderDate.ToString("d")</div>
-                        <div><a href="@Url.Action("Details", "Orders", new { id = order.OrderId })" class="action-link">View order details</a></div>
+                        <div>Número de Pedido: #@order.OrderId</div>
+                        <div>Fecha de Pedido: @order.OrderDate.ToString("d")</div>
+                        <div><a href="@Url.Action("Details", "Orders", new { id = order.OrderId })" class="action-link">Ver detalles del pedido</a></div>
                     </div>
                     <div class="col-xs-12 col-sm-9 order-detail">
                         <div class="row">
@@ -89,9 +89,9 @@
         }
         else
         {
-            <div class="alert alert-warning">
-                No orders were found matching the criteria.
-            </div>
+    <div class="alert alert-warning">
+        No se ha encontrado ningún pedido que coincida con los criterios.
+    </div>
         }
     </section>
 </div>

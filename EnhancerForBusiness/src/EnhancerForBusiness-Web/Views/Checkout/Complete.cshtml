@@ -1,22 +1,22 @@
 ﻿@model EnhancerForBusiness_Web.Models.Order
 
 @{
-    ViewBag.Title = "Checkout Complete";
+    ViewBag.Title = "Pago Completo";
 }
 <section id="complete-page">
-<h2>Checkout Complete</h2>
+    <h2>Pago Completo</h2>
 
 <div class="row">
 <div class="col-sm-12">
-<p>Thanks for your order!</p>
-<p>Your order number is: @Model.OrderId</p>
-<p>Order Date: @Model.OrderDate.ToShortDateString()</p>
-<p>
-    You can @Html.ActionLink("view your order", "Details", "Orders", new{ id = @Model.OrderId}, new{ @class="action-link"}) from your account page.
-</p>
+    <p>!Gracias por su pedido!</p>
+    <p>Su número de pedido es: @Model.OrderId</p>
+    <p>Fecha de pedido: @Model.OrderDate.ToShortDateString()</p>
+    <p>
+        Puede @Html.ActionLink("ver su pedido", "Details", "Orders", new { id = @Model.OrderId }, new { @class = "action-link" }) desde su cuenta en la página.
+    </p>
 <br/>
 <p>
-	@Html.ActionLink("Keep Shopping", "Index", "Home", null, new{ @class="btn"})
+	@Html.ActionLink("Seguir Comprando", "Index", "Home", null, new{ @class="btn"})
 </p>
 
 </div>

@@ -31,12 +31,12 @@
             </div>
             <div class="col-md-8">
                 <div>
-                    <h5>USD $@Model.Product.Price</h5>
+                    <h5>CRC ₡@Model.Product.Price</h5>
                 </div>
                 <div>
                     @if (@Model.Product.Inventory > 0)
                             {
-                        <text>In Stock (Ships 1-3 days)</text>
+                        <text>En Bodega (Ships 1-3 days)</text>
                             }
                             else
                             {
@@ -44,7 +44,7 @@
                             }
                 </div>
                 <div>
-                    <h4>Description</h4>
+                    <h4>Descripción</h4>
                     <p class="text-content">@Model.Product.Description</p>
                 </div>
 
@@ -60,7 +60,7 @@
                     </table>
                 </div>
 
-                <a href="@Url.Action("AddToCart", "ShoppingCart", new { id = Model.Product.ProductId })" class="btn">Add to Cart</a>
+                <a href="@Url.Action("AddToCart", "ShoppingCart", new { id = Model.Product.ProductId })" class="btn">Añadir al carro</a>
             </div>
 
 

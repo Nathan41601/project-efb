@@ -4,10 +4,10 @@
     var isNtlm = User.Identity.AuthenticationType == "NTLM";
     
     <li class="dropdown">
-        <a href="@Url.Action("Index", "Store")" id="profile-link" class="dropdown-toggle head-link" data-toggle="dropdown">Profile&nbsp;<br class="hidden-xs" /><b class="caret"></b></a>
+        <a href="@Url.Action("Index", "Store")" id="profile-link" class="dropdown-toggle head-link" data-toggle="dropdown">Prefíl&nbsp;<br class="hidden-xs" /><b class="caret"></b></a>
         <ul class="dropdown-menu">
-            <li>@Html.ActionLink("Manage Account", "Index", "Manage", new { Area = string.Empty }, htmlAttributes: new { title = "Manage" })</li>
-            <li>@Html.ActionLink("View Orders", "Index", "Orders", new { Area = string.Empty }, null)</li>
+            <li>@Html.ActionLink("Administrar Cuenta", "Index", "Manage", new { Area = string.Empty }, htmlAttributes: new { title = "Manage" })</li>
+            <li>@Html.ActionLink("Ver Pedidos", "Index", "Orders", new { Area = string.Empty }, null)</li>
             @if (!isNtlm)
             {
             <li>
@@ -16,7 +16,7 @@
                 {
                     @Html.AntiForgeryToken()
                 }
-                <a href="javascript:document.getElementById('logoutForm').submit()" >Log off</a>
+                <a href="javascript:document.getElementById('logoutForm').submit()" >Cerrar Sesión</a>
             </li>
             }
         </ul>
@@ -24,5 +24,5 @@
 }
 else
 {
-    <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "login-link", @class = "head-link" })</li>
+    <li>@Html.ActionLink("Sesión", "Login", "Account", routeValues: null, htmlAttributes: new { id = "login-link", @class = "head-link" })</li>
 }

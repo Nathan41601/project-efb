@@ -47,6 +47,16 @@ namespace EnhancerForBusiness_Web.Controllers
             return View(viewModel);
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
         private List<Product> GetTopSellingProducts(int count)
         {
             // Group the order details by product and return

@@ -1,7 +1,7 @@
 ﻿@using EnhancerForBusiness_Web.Utils
 @model EnhancerForBusiness_Web.Models.VerifyCodeViewModel
 @{
-    ViewBag.Title = "Verify";
+    ViewBag.Title = "Verificar";
 }
 
 <section>
@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <div class="col-sm-8 col-md-10">
                         <div class="input-group">
-                            @Html.TextBoxFor(m => m.Code, new { @class = "form-control", placeholder = "Code" })
+                            @Html.TextBoxFor(m => m.Code, new { @class = "form-control", placeholder = "Código" })
                             <span class="input-group-addon">@Html.Image("login_safe_icon.png")</span>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-8 col-md-10">
-                        <input type="submit" class="btn btn-default" value="Submit" />
+                        <input type="submit" class="btn btn-default" value="Enviar" />
                     </div>
                 </div>
             }
