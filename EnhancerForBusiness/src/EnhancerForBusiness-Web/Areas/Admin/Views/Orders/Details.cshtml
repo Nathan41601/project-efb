@@ -3,11 +3,11 @@
 @{
     if (Model == null)
     {
-        ViewBag.Title = "Unknown order";
+        ViewBag.Title = "Orden desconocida";
     }
     else
     {
-        ViewBag.Title = string.Format("Order history for {0}", Model.Order.OrderId);
+        ViewBag.Title = string.Format("Historial de pedidos para {0}", Model.Order.OrderId);
     }
 }
 
