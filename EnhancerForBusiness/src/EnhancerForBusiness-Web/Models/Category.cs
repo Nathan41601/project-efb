@@ -8,10 +8,13 @@ namespace EnhancerForBusiness_Web.Models
         public int CategoryId { get; set; }
 
         [Required]
+        [Display(Name = "Nombre")]
         public string Name { get; set; }
 
+        [Display(Name = "Descripción")]
         public string Description { get; set; }
 
+        [Display(Name = "URL de Imagen")]
         public string ImageUrl { get; set; }
 
         public List<Product> Products { get; set; }

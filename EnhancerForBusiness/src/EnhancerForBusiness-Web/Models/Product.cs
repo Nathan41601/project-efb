@@ -15,29 +15,33 @@ namespace EnhancerForBusiness_Web.Models
         [Display(Name = "Sku Number")]
         public string SkuNumber { get; set; }
 
-        [Display(Name = "Category")]
+        [Display(Name = "Categoría")]
         public int CategoryId { get; set; }
 
         public int RecommendationId { get; set; }
 
         [Required]
+        [Display(Name = "Nombre")]
         [StringLength(160, MinimumLength = 2)]
         public string Title { get; set; }
 
         [Required]
+        [Display(Name = "Precio")]
         [Range(0.01, 500.00)]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
+        [Display(Name = "Precio de Venta")]
         [Range(0.01, 500.00)]
         [DataType(DataType.Currency)]
         public decimal SalePrice { get; set; }
 
-        [Display(Name = "Product Art URL")]
+        [Display(Name = "URL del Producto")]
         [StringLength(1024)]
         public string ProductArtUrl { get; set; }
 
         [Required]
+        [Display(Name = "Descripción")]
         public string Description { get; set; }
 
         public virtual Category Category { get; set; }
@@ -50,7 +54,7 @@ namespace EnhancerForBusiness_Web.Models
         public DateTime Created { get; set; }
 
         [Required]
-        [Display(Name = "Product Details")]
+        [Display(Name = "Detalles del Producto")]
         public string ProductDetails { get; set; }
 
         public int Inventory { get; set; }
