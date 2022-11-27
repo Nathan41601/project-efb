@@ -165,7 +165,7 @@ namespace EnhancerForBusiness_Web.Controllers
                 }
             }
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "Failed to verify phone");
+            ModelState.AddModelError("", "No se ha podido verificar el teléfono");
             return View(model);
         }
 

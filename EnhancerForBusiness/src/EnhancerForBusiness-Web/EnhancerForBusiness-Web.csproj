@@ -523,6 +523,7 @@
     <Content Include="Content\_Settings.scss" />
     <Content Include="ApplicationInsights.config" />
     <None Include="Properties\PublishProfiles\enhancer-for-business-web - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\enhancer-for-business-web - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

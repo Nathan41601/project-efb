@@ -134,7 +134,7 @@ namespace EnhancerForBusiness_Web.Controllers
             var results = new ShoppingCartRemoveViewModel
             {
                 Message = removed + productName +
-                    " has been removed from your shopping cart.",
+                    " ha sido eliminado de su cesta de la compra.",
                 CartSubTotal = subTotal.ToString("C"),
                 CartShipping = shipping.ToString("C"),
                 CartTax = tax.ToString("C"),
