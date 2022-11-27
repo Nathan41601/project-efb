@@ -89,7 +89,7 @@ namespace EnhancerForBusiness_Web.Areas.Admin.Controllers
             var product = MemoryCache.Default[cacheId] as Product;
             if (product == null)
             {
-                product = db.Products.Include("Categories").FirstOrDefault(a => a.ProductId == id);
+                product = db.Products.Include("Category").FirstOrDefault(a => a.ProductId == id);
                 if (product != null)
                 {
                     MemoryCache.Default.Add(cacheId, product, DateTimeOffset.Now.AddMinutes(10));
