@@ -5,23 +5,6 @@ using Microsoft.Owin.Security;
 
 namespace EnhancerForBusiness_Web.Models
 {
-    public class ExternalLoginConfirmationViewModel
-    {
-        [Required]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
-
-        [Required]
-        [Display(Name = "Name")]
-        public string Name { get; set; }
-    }
-
-    public class ExternalLoginListViewModel
-    {
-        public string ReturnUrl { get; set; }
-        public IAuthenticationManager AuthenticationManager { get; set; }
-    }
-
     public class SendCodeViewModel
     {
         public string SelectedProvider { get; set; }
@@ -49,23 +32,23 @@ namespace EnhancerForBusiness_Web.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Correo Electrónico")]
         [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Contraseña")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "¿Recordarme?")]
         public bool RememberMe { get; set; }
     }
 
@@ -73,7 +56,7 @@ namespace EnhancerForBusiness_Web.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
 
         [Required]
@@ -92,7 +75,7 @@ namespace EnhancerForBusiness_Web.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
 
         [Required]
@@ -113,7 +96,7 @@ namespace EnhancerForBusiness_Web.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
     }
 }
