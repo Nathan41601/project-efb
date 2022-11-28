@@ -21,18 +21,18 @@ namespace EnhancerForBusiness_Web.Models
         public int RecommendationId { get; set; }
 
         [Required]
-        [Display(Name = "Nombre")]
+        [Display(Name = "Producto")]
         [StringLength(160, MinimumLength = 2)]
         public string Title { get; set; }
 
         [Required]
         [Display(Name = "Precio")]
-        [Range(0.01, 500.00)]
+        [Range(1.00, 9999999.00)]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
         [Display(Name = "Precio de Venta")]
-        [Range(0.01, 500.00)]
+        [Range(1.00, 9999999.00)]
         [DataType(DataType.Currency)]
         public decimal SalePrice { get; set; }
 
