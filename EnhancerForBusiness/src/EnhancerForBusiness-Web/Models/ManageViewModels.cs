@@ -44,7 +44,7 @@ namespace EnhancerForBusiness_Web.Models
     {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
+        [Display(Name = "Contraseña Actual")]
         public string OldPassword { get; set; }
 
         [Required]
