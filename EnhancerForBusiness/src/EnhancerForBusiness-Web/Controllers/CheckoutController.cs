@@ -19,8 +19,6 @@ namespace EnhancerForBusiness_Web.Controllers
             db = context;
         }
 
-        private const string PromoCode = "FREE";
-
         //
         // GET: /Checkout/
 
@@ -50,13 +48,6 @@ namespace EnhancerForBusiness_Web.Controllers
 
             try
             {
-                if (string.Equals(formCollection.GetValues("PromoCode").FirstOrDefault(), PromoCode,
-                    StringComparison.OrdinalIgnoreCase) == false)
-                {
-                    return View(order);
-                }
-                else
-                {
                     order.Username = User.Identity.GetUserName();
                     order.OrderDate = DateTime.Now;
 
@@ -71,7 +62,6 @@ namespace EnhancerForBusiness_Web.Controllers
                     await db.SaveChangesAsync(CancellationToken.None);
 
                     return RedirectToAction("Complete", new { id = order.OrderId });
-                }
             }
             catch
             {

@@ -14,7 +14,7 @@
     {
         @Html.AntiForgeryToken()
 <div class="row">
-    <div class="col-sm-12 col-md-6 col-border-md-right no-gutter-xs">
+    <div class="col-md-6 no-gutter-xs">
         <div class="col-xs-12 no-gutter-sm">
             <h4>Información de Envío</h4>
         </div>
@@ -50,26 +50,12 @@
             @Html.TextBoxFor(m => m.Country, new { @class = "form-control", placeholder = "Distrito" })
             @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
         </div>
-        <div class="col-md-12 no-gutter-sm">
+        <div class="col-md-6 no-gutter-sm">
             <input type="submit" value="Enviar Pedido" />
         </div>
     </div>
-            <div class="col-sm-12 col-md-6 wide-col-padding no-gutter-xs">
-                <div class="col-xs-12  no-gutter-sm">
-                    <h4>Pago</h4>
-                </div>
-                <div class="col-md-12 no-gutter-sm" >
-                    <p>Tenemos una promoción.</p>
-                    <p>Todas las piezas son gratuitas con el código de promoción: "FREE"</p>
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBox("PromoCode", null, new { @class = "form-control", placeholder = "Código de Promoción" })
-                </div>
-                <div class="col-md-12 no-gutter-sm">
-                    <input type="submit" value="Enviar Pedido" />
-                </div>
-
-            </div>
+    <div class="col-md-6 no-gutter-xs">
+    </div>
 </div>
     }
 </section>
