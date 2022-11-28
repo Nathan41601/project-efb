@@ -15,11 +15,11 @@ namespace EnhancerForBusiness_Web.Models
 
     public class VerifyCodeViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "El campo Provider es requerido.")]
         public string Provider { get; set; }
 
-        [Required]
-        [Display(Name = "Code")]
+        [Required(ErrorMessage = "El campo Código es requerido.")]
+        [Display(Name = "Código")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
@@ -31,19 +31,19 @@ namespace EnhancerForBusiness_Web.Models
 
     public class ForgotViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "El campo Correo Electrónico es requerido.")]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "El campo Correo Electrónico es requerido.")]
         [Display(Name = "Correo Electrónico")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El campo Contraseña es requerido.")]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
         public string Password { get; set; }
@@ -54,13 +54,13 @@ namespace EnhancerForBusiness_Web.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "El campo Correo Electrónico es requerido.")]
         [EmailAddress]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} caracteres.", MinimumLength = 6)]
+        [Required(ErrorMessage = "El campo Contraseña es requerido.")]
+        [StringLength(100, ErrorMessage = "La {0} debe tener al menos {2} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
         public string Password { get; set; }
@@ -73,13 +73,13 @@ namespace EnhancerForBusiness_Web.Models
 
     public class ResetPasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "El campo Correo Electrónico es requerido.")]
         [EmailAddress]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "El {0} debe tener al menos {2} caracteres.", MinimumLength = 6)]
+        [Required(ErrorMessage = "El campo Contraseña es requerido.")]
+        [StringLength(100, ErrorMessage = "La {0} debe tener al menos {2} caracteres.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Contraseña")]
         public string Password { get; set; }
@@ -94,7 +94,7 @@ namespace EnhancerForBusiness_Web.Models
 
     public class ForgotPasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "El campo Correo Electrónico es requerido.")]
         [EmailAddress]
         [Display(Name = "Correo Electrónico")]
         public string Email { get; set; }
