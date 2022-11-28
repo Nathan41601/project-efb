@@ -11,9 +11,9 @@
         <a href="@Url.Action("Index", "Store")" id="admin-link" class="dropdown-toggle head-link" data-toggle="dropdown">Admin&nbsp;<br class="hidden-xs" /><b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li> @Html.ActionLink("Gestionar Artículos", "Index", "StoreManager", new { area = AdminConstants.Area }, null) </li>
-            <li> @Html.ActionLink("Ver Pedidos", "Index", "Orders", new { area = AdminConstants.Area }, null) </li>
+            <li> @Html.ActionLink("Pedidos", "Index", "Orders", new { area = AdminConstants.Area }, null) </li>
             <li> @Html.ActionLink("Encontrar Clientes", "Find", "Customer", new { area = AdminConstants.Area }, null) </li>
-            <li> @Html.ActionLink("Ver Rainchecks", "Index", "Raincheck", new { area = AdminConstants.Area }, null) </li>
+            <li> @Html.ActionLink("Almacenes", "Index", "Raincheck", new { area = AdminConstants.Area }, null) </li>
         </ul>
     </li>
 }
