@@ -14,43 +14,46 @@
     {
         @Html.AntiForgeryToken()
 <div class="row">
-            <div class="col-sm-12 col-md-6 col-border-md-right no-gutter-xs">
-                <div class="col-xs-12 no-gutter-sm">
-                    <h4>Shipping Information</h4>
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Nombre" })
-                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", placeholder = "Teléfono" })
-                    @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Correo Electrónico" })
-                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Dirección" })
-                    @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.City, new { @class = "form-control", placeholder = "Cantón" })
-                    @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.State, new { @class = "form-control", placeholder = "Provincia" })
-                    @Html.ValidationMessageFor(m => m.State, "", new { @class = "text-danger" })
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.PostalCode, new { @class = "form-control", placeholder = "Código Postal" })
-                    @Html.ValidationMessageFor(m => m.PostalCode, "", new { @class = "text-danger" })
-                </div>
-                <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
-                    @Html.TextBoxFor(m => m.Country, new { @class = "form-control", placeholder = "Distrito" })
-                    @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
-                </div>
-            </div>
+    <div class="col-sm-12 col-md-6 col-border-md-right no-gutter-xs">
+        <div class="col-xs-12 no-gutter-sm">
+            <h4>Información de Envío</h4>
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Nombre" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", placeholder = "Teléfono" })
+            @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Correo Electrónico" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Dirección" })
+            @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control", placeholder = "Cantón" })
+            @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.State, new { @class = "form-control", placeholder = "Provincia" })
+            @Html.ValidationMessageFor(m => m.State, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.PostalCode, new { @class = "form-control", placeholder = "Código Postal" })
+            @Html.ValidationMessageFor(m => m.PostalCode, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group col-sm-8 col-md-10 no-gutter-sm">
+            @Html.TextBoxFor(m => m.Country, new { @class = "form-control", placeholder = "Distrito" })
+            @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-md-12 no-gutter-sm">
+            <input type="submit" value="Enviar Pedido" />
+        </div>
+    </div>
             <div class="col-sm-12 col-md-6 wide-col-padding no-gutter-xs">
                 <div class="col-xs-12  no-gutter-sm">
                     <h4>Pago</h4>
@@ -63,10 +66,10 @@
                     @Html.TextBox("PromoCode", null, new { @class = "form-control", placeholder = "Código de Promoción" })
                 </div>
                 <div class="col-md-12 no-gutter-sm">
-                    <input type="submit" value="Submit Order" />
+                    <input type="submit" value="Enviar Pedido" />
                 </div>
 
             </div>
-            </div>
+</div>
     }
 </section>
