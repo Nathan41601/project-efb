@@ -13,7 +13,13 @@
     {
         @Html.AntiForgeryToken()
 
+        /*Keep the values in the model to avoid lost them in the submit action*/
         @Html.HiddenFor(m => m.Created)
+        @Html.HiddenFor(m => m.LeadTime)
+        @Html.HiddenFor(m => m.Inventory)
+        @Html.HiddenFor(m => m.RecommendationId)
+        @Html.HiddenFor(m => m.SalePrice)
+
         <div class="form-horizontal">
             <h4>Producto</h4>
             <hr />
