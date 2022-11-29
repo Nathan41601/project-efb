@@ -5,11 +5,11 @@ namespace EnhancerForBusiness_Web.Models
 {
     public class Category
     {
-
+        [Display(Name = "Categoría")]
         public int CategoryId { get; set; }
 
         [Required]
-        [Display(Name = "Categoría")]
+        [Display(Name = "Nombre")]
         public string Name { get; set; }
 
         [Display(Name = "Descripción")]
