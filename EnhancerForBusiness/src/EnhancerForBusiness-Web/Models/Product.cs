@@ -12,7 +12,7 @@ namespace EnhancerForBusiness_Web.Models
         public int ProductId { get; set; }
 
         [Required]
-        [Display(Name = "Sku Number")]
+        [Display(Name = "Número Sku")]
         public string SkuNumber { get; set; }
 
         [Display(Name = "Categoría")]
@@ -27,12 +27,11 @@ namespace EnhancerForBusiness_Web.Models
 
         [Required]
         [Display(Name = "Precio")]
-        [Range(1.00, 9999999.00)]
+        [Range(typeof(decimal), "1", "9999999.00")]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
         [Display(Name = "Precio de Venta")]
-        [Range(1.00, 9999999.00)]
         [DataType(DataType.Currency)]
         public decimal SalePrice { get; set; }
 
@@ -50,7 +49,6 @@ namespace EnhancerForBusiness_Web.Models
 
         [ScaffoldColumn(false)]
         [BindNever]
-        [Required]
         public DateTime Created { get; set; }
 
         [Required]
