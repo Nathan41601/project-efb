@@ -13,6 +13,7 @@
     {
         @Html.AntiForgeryToken()
 
+        @Html.HiddenFor(m => m.Created)
         <div class="form-horizontal">
             <h4>Producto</h4>
             <hr />
@@ -26,12 +27,28 @@
                     @Html.ValidationMessageFor(model => model.CategoryId)
                 </div>
             </div>
-           
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.Title)
                     @Html.ValidationMessageFor(model => model.Title)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductDetails, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductDetails)
+                    @Html.ValidationMessageFor(model => model.ProductDetails)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Description)
+                    @Html.ValidationMessageFor(model => model.Description)
                 </div>
             </div>
 
@@ -48,6 +65,14 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.ProductArtUrl)
                     @Html.ValidationMessageFor(model => model.ProductArtUrl)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SkuNumber, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SkuNumber)
+                    @Html.ValidationMessageFor(model => model.SkuNumber)
                 </div>
             </div>
 
