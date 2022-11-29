@@ -17,7 +17,7 @@
                                 <label for="inputfield1" class="control-label">Nombre de Usuario</label>
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-7">
-                                <input type="text" class="form-control" name="username" value="@Model.Username" placeholder="Username"  />
+                                <input type="text" class="form-control" name="username" value="@Model.Username" placeholder="Nombre de Usuario"  />
                             </div>
                         </div>
                     }
@@ -52,7 +52,7 @@
                     @using (Html.BeginForm("Details", "Orders", FormMethod.Get))
             {
                         <div class="col-sm-8 col-md-10">
-                            <input type="text" class="form-control" id="name" name="id" placeholder="Order number" />
+                            <input type="text" class="form-control" id="name" name="id" placeholder="Número de Orden" />
                             <input class="btn" type="submit" value="Buscar" />
                         </div>
                     }
