@@ -33,12 +33,12 @@ namespace EnhancerForBusiness_Web.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-                : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
+                message == ManageMessageId.ChangePasswordSuccess ? "Su contraseña ha sido cambiada."
+                : message == ManageMessageId.SetPasswordSuccess ? "Su contraseña ha sido establecida."
+                : message == ManageMessageId.SetTwoFactorSuccess ? "Su autenticación de dos factores ha sido configurado."
+                : message == ManageMessageId.Error ? "Se ha producido un error."
+                : message == ManageMessageId.AddPhoneSuccess ? "Su número de teléfono ha sido añadido."
+                : message == ManageMessageId.RemovePhoneSuccess ? "Su número de teléfono fue eliminado."
                 : "";
 
             var user = await GetCurrentUserAsync();
@@ -102,7 +102,7 @@ namespace EnhancerForBusiness_Web.Controllers
 
         //
         // POST: /Manage/EnableTwoFactorAuthentication
-        [HttpPost]
+/*        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> EnableTwoFactorAuthentication()
         {
@@ -128,7 +128,7 @@ namespace EnhancerForBusiness_Web.Controllers
                 await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
             }
             return RedirectToAction("Index", "Manage");
-        }
+        }*/
 
         //
         // GET: /Manage/VerifyPhoneNumber
@@ -138,9 +138,9 @@ namespace EnhancerForBusiness_Web.Controllers
         {
             // This code allows you exercise the flow without actually sending codes
             // For production use please register a SMS provider in IdentityConfig and generate a code here.
-#if DEMO
+//#if DEMO
             ViewBag.Code = await UserManager.GenerateChangePhoneNumberTokenAsync((await GetCurrentUserAsync()).Id, phoneNumber);
-#endif
+//#endif
             return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
         }
 

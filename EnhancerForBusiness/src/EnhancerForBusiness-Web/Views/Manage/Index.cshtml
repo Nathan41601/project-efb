@@ -13,11 +13,11 @@
                 [
                 @if (Model.HasPassword)
                 {
-                    @Html.ActionLink("Agregar su contraseña", "ChangePassword")
+                    @Html.ActionLink("Cambiar su contraseña", "ChangePassword")
                 }
                 else
                 {
-                    @Html.ActionLink("Agregar", "SetPassword")
+                    @Html.ActionLink("Cambiar", "SetPassword")
                 }
                 ]
             </dd>
@@ -61,7 +61,7 @@
                     <span>[ <input type="submit" value="Activar" class="btn btn-link" /> ]</span>
                 }
             }
-        </dd>*@
+        </dd>
             <dt>Browser remembered:</dt>
             <dd>
                 @if (Model.BrowserRemembered)
@@ -82,7 +82,7 @@
                         <span>[ <input type="submit" value="Recordar" class="btn btn-link" /> ]</span>
                     }
                 }
-            </dd>
+            </dd>*@
         </dl>
     </div>
 </section>
